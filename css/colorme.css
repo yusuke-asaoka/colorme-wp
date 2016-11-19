@@ -1,0 +1,40 @@
+.colorme-box{
+	margin: 20px 0;
+	width: 100%;
+	height: auto;
+	
+}
+
+.colorme-box p{
+
+}
+
+.colorme-box img{
+	width: 100%;
+	height: auto;
+
+}
+
+.colorme-box #colorme-box-title{
+	font-weight: bold;
+}
+
+.colorme-check{
+	margin: 10px 0;
+}
+
+.colorme-check a{
+	padding: 5px 10px;
+	background-color: #999;
+	color: #fff;
+	text-decoration: none;
+}
+
+.colorme-check a:hover{
+	opacity: .8;
+}
+
+.colorme-api input[type="text"]{
+	width: 100%;
+	max-width: 540px;
+}
