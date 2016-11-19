@@ -132,8 +132,10 @@ class Colorme_check
 
     public function save_colorme_meta_boxes(){
         global $post;
-        if(check_admin_referer( 'my-nonce-colorme','colorme-nonce' )){
-            update_post_meta($post->ID, 'colorme_id', $_POST['colorme_id']);
+        if('post' == $_POST['post_type'] && isset($_POST['post_type'])){
+            if(check_admin_referer( 'my-nonce-colorme','colorme-nonce' )){
+                update_post_meta($post->ID, 'colorme_id', $_POST['colorme_id']);
+            }
         }
     }
 
@@ -168,7 +170,8 @@ class Colorme_check
             $request_options = array(
                 'http' => array(
                     'method'  => 'GET',
-                    'header'=> "Authorization: Bearer $token\r\n"
+                    'header'=> "Authorization: Bearer $token\r\n",
+                    'ignore_errors' => true
                 )
             );
 
